@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>products</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- ---------------------font awesom -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- card bg #6E726C 
+     bg- #171F12 -->
+
+</head>
+
+<body class="bg-[#171F12]">
+    <!-- --------------------------nav -->
+    <header class="absolute inset-x-0 top-0 z-50 ">
+        <nav aria-label="Global" class="flex justify-between p-3 h-30 lg:px-8">
+            <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <!-- <span class="sr-only">Planto</span> -->
+                    <img src="imgs/plant 1.png" alt="" />
+                </a>
+            </div>
+            <div class="flex lg:hidden ">
+                <button type="button" command="show-modal" commandfor="mobile-menu"
+                    class="-m-2.5 inline-flex mt-4 me-8 rounded-md p-2.5 text-gray-200">
+                    <span class="sr-only">Open main menu</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+                        aria-hidden="true" class="size-6">
+                        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <ul class="list-none hidden lg:flex lg:gap-x-12  pt-4">
+                <li><a href="index.html" class="text-xl font-semibold text-white ">Home</a>
+                </li>
+                <li>
+                    <details class="relative">
+                        <summary class="cursor-pointer text-xl font-semibold text-white  py-1 ">
+                            Plants Type
+                        </summary>
+                        <ul class="absolute mt-2 w-40 bg-white border rounded-md shadow-lg z-10">
+                            <li><a href="#" class="block px-4 py-2 text-sm text-black hover:bg-gray-100">xanzophil</a>
+                            </li>
+                            <li><a href="#" class="block px-4 py-2 text-sm text-black hover:bg-gray-100">alovera</a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="products.html"
+                        class="text-2xl font-semibold text-white underline underline-offset-8">Products</a></li>
+                <li><a href="contact.html" class="text-xl font-semibold text-white ">Contact</a></li>
+            </ul>
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end pt-4  gap-4">
+                <a href="#"> <i class="fa-solid fa-magnifying-glass text-white"></i></a>
+                <a href="#"> <i class="fa-regular fa-user text-white"></i></a>
+                <a href="#"> <i class="fa-solid fa-cart-shopping  text-white"></i></a>
+
+            </div>
+        </nav>
+        <el-dialog>
+            <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+                <div tabindex="0" class="fixed inset-0 focus:outline-none">
+                    <el-dialog-panel
+                        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#171F12] p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+                        <div class="flex items-center justify-between">
+                            <a href="#" class="-m-1.5 p-1.5 h-20">
+                                <span class="sr-only">Company</span>
+                                <img src="imgs/plant 1.png" alt="" />
+                            </a>
+                            <button type="button" command="close" commandfor="mobile-menu"
+                                class="-m-2.5 rounded-md p-2.5 text-gray-200">
+                                <span class="sr-only">Close menu</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    data-slot="icon" aria-hidden="true" class="size-6">
+                                    <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="mt-6 flow-root">
+                            <div class="-my-6 divide-y divide-white/10">
+                                <div class="space-y-2 py-6">
+                                    <a href="index.html"
+                                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Home</a>
+                                    <a href="products.html"
+                                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Products</a>
+                                    <a href="contact.html"
+                                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Contact</a>
+                                    <a href="#"
+                                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">more</a>
+                                </div>
+                                <div class="py-6">
+                                    <a href="#"
+                                        class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5">Log
+                                        in</a>
+                                </div>
+                            </div>
+                        </div>
+                    </el-dialog-panel>
+                </div>
+            </dialog>
+        </el-dialog>
+    </header>
+    <!-- ----------------------------------------------------------------------------cards -->
+
+    <section>
+        <div class="hero mt-20 lg:mt-30">
+            <h1 class="text-emerald-50 text-xl font-bold text-center md:text-4xl lg:text-5xl ">Our Top Selling</h1>
+            <div class="cards mt-25  md:flex md:flex-wrap gap-8  mx-5 justify-center  ">
+                <!-- ---------------------------1 -->
+                <div class="card justify-center my-25  flex  ">
+                    <div
+                        class="rounded-[1.5rem] relative  lg:rounded-[5rem] px-6 py-8 ring shadow-xl bg-[#6E726C]/8 ring-gray-100/2 h-80 w-80 md:h-100 md:w-80 lg:h-120 lg:w-100 lg:me-8 ">
+                        <a href="#"
+                            class="absolute w-80 md:w-100 left-[-.5rem] top-[-5rem] md:top-[-8rem] md:left-[-2.5rem] lg:left-[.3rem] lg:top-[-5rem]">
+                            <img class="" src="imgs/Rose Gold Feminine Calligraphy Monogram Logo(15) 1.png" alt="" />
+                        </a>
+                        <div class="text-emerald-50 absolute bottom-1 px-5 md:bottom-5 left-3 lg:bottom-8 lg:left-8 ">
+                            <h2 class="text-3xl my-2 md:text-4xl lg:text-5xl lg:my-3 ">Calathea plant</h2>
+                            <p class=" text-xs md:text-2xl ">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            </p>
+                            <div class="card__contact my-6 flex justify-between me-8 ">
+                                <span class="text-xl">Rs. 309/-</span>
+                                <a class="border rounded-md px-1" href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ------------------------------------2 -->
+
+                <div class="card justify-center my-25 flex ">
+                    <div
+                        class="rounded-[1.5rem] relative  lg:rounded-[5rem] px-6 py-8 ring shadow-xl bg-[#6E726C]/8 ring-gray-100/2 h-80 w-80 md:h-100 md:w-80 lg:h-120 lg:w-100 lg:me-8 ">
+                        <a href="#"
+                            class="absolute w-80 left-[-.2rem]  top-[-8rem] md:top-[-9] lg:w-100 lg:left-[.3rem] lg:top-[-10rem]">
+                            <img class="" src="imgs/Rose Gold Feminine Calligraphy Monogram Logo(20) 1.png" alt="" />
+                        </a>
+                        <div class="text-emerald-50 absolute bottom-1 px-5 md:bottom-5 left-3 lg:bottom-8 lg:left-8 ">
+                            <h2 class="text-3xl my-2 md:text-4xl lg:text-5xl lg:my-3 ">Calathea plant</h2>
+                            <p class=" text-xs md:text-2xl ">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            </p>
+                            <div class="card__contact my-6 flex justify-between me-8 ">
+                                <span class="text-xl">Rs. 309/-</span>
+                                <a class="border rounded-md px-1" href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------------------------------------3 -->
+                <div class="card justify-center my-25 flex ">
+                    <div
+                        class="rounded-[1.5rem] relative  lg:rounded-[5rem] px-6 py-8 ring shadow-xl bg-[#6E726C]/8 ring-gray-100/2 h-80 w-80 md:h-100 md:w-80 lg:h-120 lg:w-100 lg:me-8 ">
+                        <a href="#"
+                            class="absolute w-80 left-[-.2rem]  top-[-8rem] md:top-[-9rem] lg:w-100 lg:left-[.3rem]">
+                            <img class="" src="imgs/3.png" alt="" />
+                        </a>
+                        <div class="text-emerald-50 absolute bottom-1 px-5 md:bottom-5 left-3 lg:bottom-8 lg:left-8 ">
+                            <h2 class="text-3xl my-2 md:text-4xl lg:text-5xl lg:my-3 ">Calathea plant</h2>
+                            <p class=" text-xs md:text-2xl ">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            </p>
+                            <div class="card__contact my-6 flex justify-between me-8 ">
+                                <span class="text-xl">Rs. 309/-</span>
+                                <a class="border rounded-md px-1" href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- -------------------------------------------4 -->
+                <div class="card justify-center my-25 flex ">
+                    <div
+                        class="rounded-[1.5rem] relative  lg:rounded-[5rem] px-6 py-8 ring shadow-xl bg-[#6E726C]/8 ring-gray-100/2 h-80 w-80 md:h-100 md:w-80 lg:h-120 lg:w-100 lg:me-8 ">
+                        <a href="#"
+                            class="absolute w-80 left-[-.2rem]  top-[-8rem] md:top-[-9rem] lg:w-100 lg:left-[.3rem]">
+                            <img class="" src="imgs/4.png" alt="" />
+                        </a>
+                        <div class="text-emerald-50 absolute bottom-1 px-5 md:bottom-5 left-3 lg:bottom-8 lg:left-8 ">
+                            <h2 class="text-3xl my-2 md:text-4xl lg:text-5xl lg:my-3 ">Calathea plant</h2>
+                            <p class=" text-xs md:text-2xl ">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            </p>
+                            <div class="card__contact my-6 flex justify-between me-8 ">
+                                <span class="text-xl">Rs. 309/-</span>
+                                <a class="border rounded-md px-1" href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ----------------------------------------5 -->
+                <div class="card justify-center my-25 flex ">
+                    <div
+                        class="rounded-[1.5rem] relative  lg:rounded-[5rem] px-6 py-8 ring shadow-xl bg-[#6E726C]/8 ring-gray-100/2 h-80 w-80 md:h-100 md:w-80 lg:h-120 lg:w-100 lg:me-8 ">
+                        <a href="#"
+                            class="absolute w-80 left-[-.2rem]  top-[-9rem] lg:w-100 lg:left-[.3rem] lg:top-[-10rem]">
+                            <img class="" src="imgs/5.png" alt="" />
+                        </a>
+                        <div class="text-emerald-50 absolute bottom-1 px-5 md:bottom-5 left-3 lg:bottom-8 lg:left-8 ">
+                            <h2 class="text-3xl my-2 md:text-4xl lg:text-5xl lg:my-3 ">Calathea plant</h2>
+                            <p class=" text-xs md:text-2xl ">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            </p>
+                            <div class="card__contact my-6 flex justify-between me-8 ">
+                                <span class="text-xl">Rs. 309/-</span>
+                                <a class="border rounded-md px-1" href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- -----------------------------------6 -->
+                <div class="card justify-center my-25 flex ">
+                    <div
+                        class="rounded-[1.5rem] relative  lg:rounded-[5rem] px-6 py-8 ring shadow-xl bg-[#6E726C]/8 ring-gray-100/2 h-80 w-80 md:h-100 md:w-80 lg:h-120 lg:w-100 lg:me-8 ">
+                        <a href="#"
+                            class="absolute w-80 left-[-.5rem]  top-[-8.4rem] lg:w-120 lg:left-[-3rem] lg:top-[-13rem]">
+                            <img class="" src="imgs/6.png" alt="" />
+                        </a>
+                        <div class="text-emerald-50 absolute bottom-1 px-5 md:bottom-5 left-3 lg:bottom-8 lg:left-8 ">
+                            <h2 class="text-3xl my-2 md:text-4xl lg:text-5xl lg:my-3 ">Calathea plant</h2>
+                            <p class=" text-xs md:text-2xl ">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            </p>
+                            <div class="card__contact my-6 flex justify-between me-8 ">
+                                <span class="text-xl">Rs. 309/-</span>
+                                <a class="border rounded-md px-1" href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" text-center mb-30">
+                <a href="#" class="text-3xl  font-semibold text-white "> For More products <span
+                        aria-hidden="true">&rarr;</span></a>
+            </div>
+        </div>
+    </section>
+    <!-- <hr> -->
+    <!-- -----------------------------------state -->
+    <!-- <div class=" py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+      <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+        <dt class="text-base/7 text-gray-400">Transactions every 24 hours</dt>
+        <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">44 million</dd>
+      </div>
+      <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+        <dt class="text-base/7 text-gray-400">Assets under holding</dt>
+        <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">$119 trillion</dd>
+      </div>
+      <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+        <dt class="text-base/7 text-gray-400">New users annually</dt>
+        <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">46,000</dd>
+      </div>
+    </dl>
+  </div>
+</div> -->
+
+
+    <!-- -------------------footer---------------------------------- -->
+    <footer>
+        <footer class="footer bg-[#222C1D]  p-8 text-white">
+            <div class="container flex flex-col lg:flex-row  justify-between  ">
+                <div class="logo  md:me-8 columns-3xs self-center mb-8  ">
+                    <!-- <a class="" href="#"> <img src="imgs/plant 1.png" alt=""></a> -->
+                    <p class="w-xs my-3  text-gray-300">Generate outside the box thinking with the possibility to
+                        targtet the low.</p>
+                    <form class="sub__action border-white border-1 w-md-100  mt-4 me-7  ">
+                        <input class="  p-2 md:w-75 text-gray-100  " type="email" placeholder="Enter Email">
+                        <a class="p-2 font-semibold me-[.1rem] text-center text-[#222C1D] bg-white"
+                            href="#">Subscribe</a>
+                    </form>
+                </div>
+                <div
+                    class="footer__contant flex justify-center mt-5 text-center md:text-start md:gap-15  lg:gap-[10rem]   flex-col md:flex-row">
+                    <div class="chosses">
+                        <h4 class="font-bold ">Why Choose Us?</h4>
+                        <ul class="footer__links  text-gray-300">
+                            <li> <a href="#">Scale</a> </li>
+                            <li><a href="#">Solutions</a></li>
+                            <li><a href="#">Our Competition</a></li>
+                            <li><a href="#">Channels</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Watch the Demo</a></li>
+                        </ul>
+                    </div>
+                    <div class="campany ">
+                        <h4 class="font-bold mt-3">Campany</h4>
+                        <ul class="footer__links text-gray-300">
+                            <li><a href="#">Leadership</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li> <a href="#">Investor Relations</a></li>
+                            <li><a href="#">Media Kit</a></li>
+                        </ul>
+                    </div>
+                    <div class="Resources ">
+                        <h4 class="font-bold mt-3">Resources</h4>
+                        <ul class="footer__links text-gray-300 text-lg">
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Help Center </a></li>
+                            <li><a href="#">Partners</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright text-center my-5 md:text-2xl md:mt-8">
+                <span>© All Rights Reserved.</span>
+            </div>
+        </footer>
+    </footer>
+</body>
+
+</html>
