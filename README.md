@@ -7,8 +7,7 @@ It provides basic information about plants, showcases a collection of plant prod
 
 ## 🔗 Live Demo
 
-👉 [Live Preview] (https://alaaibra-him.github.io/planto-site-by-Tailwind-/)
-
+**Live Demo:** [View Here](https://alaaibra-him.github.io/Planto/)
 ---
 
 ## 📁 Pages Overview
