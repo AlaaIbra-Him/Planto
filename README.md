@@ -35,5 +35,3 @@ It provides basic information about plants, showcases a collection of plant prod
 - **HTML5**
 - **Tailwind CSS**
 - Fully Responsive Design (Mobile / Tablet / Desktop)
-```bash
-git clone https://github.com/your-username/planto.git
